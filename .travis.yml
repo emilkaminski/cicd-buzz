@@ -3,3 +3,5 @@ script:
     - python -m pytest -v
 notifications:
   slack: codewarsaw:npAF0jxCQXQBqcW3b74qxv6I
+after_success:
+    - sh .travis/deploy_dockerhub.sh
