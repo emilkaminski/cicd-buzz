@@ -6,3 +6,10 @@ notifications:
 after_success:
     - sh .travis/deploy_dockerhub.sh
     - sh .travis/deploy_heroku.sh
+deploy:
+    provider: heroku
+    api_key:
+        secure: a083e6ad-dfea-4ed3-891c-496b93fc1d08
+    app: damp-refuge-74606  
+    on:
+        repo: emilkaminski/cicd-buzz   
